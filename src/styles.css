@@ -1,0 +1,61 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  margin: auto;
+
+  padding: 10px;
+  color: #333333;
+  border-style: solid;
+  border-radius: 10px;
+}
+h2 {
+  color: #333333;
+  font-size: large;
+}
+h3 {
+  padding: 5px;
+  color: #376bf8;
+}
+section {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+input {
+  padding: 5px;
+  max-width: 100px;
+  height: 30px;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  border-width: 1px;
+  text-align: center;
+  font-size: larger;
+}
+
+.cta-btn {
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 25px;
+  background-color: rgb(71, 74, 83);
+  border-radius: 8px;
+  border-width: 0;
+  color: #ffffff;
+  cursor: pointer;
+  min-width: 80px;
+  min-height: 30px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+}
