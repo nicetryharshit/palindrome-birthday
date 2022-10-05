@@ -137,6 +137,7 @@ export default function App()
   const [rawInputDate, setRawInputDate] = useState();
   const [formattedDateStr, setFormattedDate] = useState();
   const [result, setResult] = useState("");
+  const [resultStyle, setResultStyle] = useState();
 
   const onDateChange = (event) =>
   {
@@ -190,17 +191,20 @@ export default function App()
       {
         if (isPalindrome(allDateFormats[index].date))
         {
+          setResultStyle({ backgroundColor: "#98FCA4" });
           setResult("Your birthdate " + rawInputDate + " in the format " + allDateFormats[index].format + " is palindrome! ");
           return;
         }
       }
-      // setResult("Your birthdate is NOT palindrome! Next palindrome date is: ");
+
+      setResultStyle({ backgroundColor: "#FCA998" });
       let nextPalDate = nextPalindromeDate();
       setResult("Your birthdate is NOT palindrome! Next palindrome date is: " + nextPalDate.dateFormat + ". It is " + nextPalDate.dCount + " days away.");
     }
     //not a number
     else
     {
+      setResultStyle({ backgroundColor: "#CAE1ED" });
       setResult("Please enter your birth date!");
     }
   };
@@ -213,7 +217,9 @@ export default function App()
         <button className="cta-btn" onClick={() => onCheck()}>
           Check
         </button>
-        <h3>{result}</h3>
+        <section className="result" style={resultStyle}>
+          <h3>{result}</h3>
+        </section>
       </section>
     </div>
   );
